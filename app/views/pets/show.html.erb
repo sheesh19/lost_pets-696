@@ -1,0 +1,11 @@
+<h2><%= @pet.name %> </h2>
+
+<p><%= @pet.found_days_ago %> days ago </p>
+<p><%= @pet.species %> </p>
+<p><%= @pet.address %> </p>
+
+<%= link_to "HOME", pets_path, class: 'btn btn-secondary' %>
+<%= link_to "EDIT", edit_pet_path(@pet), class: 'btn btn-primary' %>
+<%= link_to pet_path(@pet), method: :delete do %>
+    <i class="fa fa-trash"></i>
+<% end %>
